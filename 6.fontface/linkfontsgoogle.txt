@@ -1,0 +1,5 @@
+google font
+http://www.fonts.google.com
+https://www.fontsquirrel.com/
+
+format font woff untuk web

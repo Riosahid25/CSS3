@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>transition delay</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .kotak {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            margin: 5px 0;
+            transition: margin-left 3s, transform 3s 2s, background-color 500ms 3s;
+            /* transition: durasi , delay */
+            /* cara baca nya:
+            transition: bergeser ke kanan 3detik, baru berputar 3detik tapi nunggu dulu 2detik, pergantian warna durasi 3detik nunggu dulu 2 detik */
+        }
+
+        .container {
+            width: 900px;
+            margin: 10px auto;
+            border: 5px solid black;
+        }
+
+        .container:hover .kotak {
+            transform: rotate(720deg);
+            margin-left: 800px;
+            background-color: royalblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- delay digunakan untuk memberikan waktu tunggu sebelum melakukan transisi nilainya kayak dursi.
+    nilai pertama durasi yg kedua delay
+    -->
+    <div class="container">
+        <div class="kotak"></div>
+    </div>
+</body>
+
+</html>

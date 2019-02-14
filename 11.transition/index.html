@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>transition</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .kotak {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 100px;
+            margin: 5px 0;
+            /* simpan property transition selalu dikeadaan awal */
+
+        }
+
+        .kotak1 {
+            transition: 3s ease;
+            /* pergerakannya standart */
+        }
+
+        .kotak2 {
+            transition: 3s ease-in;
+            /* ease-in pergeraknya semakin cepat */
+        }
+
+        .kotak3 {
+            transition: 3s ease-out;
+        }
+
+        .kotak4 {
+            transition: 3s ease-in-out;
+        }
+
+        .kotak5 {
+            transition: 3s linear;
+        }
+
+        .kotak6 {
+            transition: 3s cubic-bezier(0.55, -0.12, 0.62, 1.37);
+            /* bisa siatur melalu inspect browser chrome */
+        }
+
+
+        .container {
+            width: 900px;
+            margin: 10px auto;
+            border: 5px solid black;
+        }
+
+        .container:hover .kotak {
+            /* cara baca diatas : pada saat container nya di hover kotak didalamnya bergeser */
+            transform: rotate(720deg);
+            margin-left: 800px;
+            /* geser kotaknya sebanyak 800px */
+            background-color: royalblue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- dengan menggunakan trasition memungkinkan kita dapat mengubah nilai dari property HTML secara halus -->
+
+    <!-- property transition 
+    [property] <durasi> [fungsi] [delay];
+    -->
+
+    <!-- durasi memiliki angka satuan = s/ms -->
+
+    <!-- beberapa contoh properti yang bisa dianimations kan 
+    -background-color     -top left bottom right
+    -background-position  -margin padding
+    -background-size      -widht height
+    -border               -opacity
+    -color                -transform
+    -filter               -word-spacing
+    -font-size            -letter-spacing
+    -line-height
+    -->
+
+    <!-- [fungsi]transisi (timing funciton) 
+    pergerakan apa yang akan kalian lakukan saat menggunkan transisi
+    -->
+
+    <!-- nilai yg diberikan 
+    timing funcition
+    -ease
+    -ease-in
+    -ease-out
+    -ease-in-out
+    -linier
+    -cubic-bezier(w,x,y,z)
+    -->
+
+    <!-- delay
+    digunakan untuk memberikan waktu tunggu sebelum menjalankan transisi nilai sama kayak durasi
+    -->
+    <div class="container">
+        <div class="kotak kotak1">ease</div>
+        <div class="kotak kotak2">ease-in</div>
+        <div class="kotak kotak3">ease-out</div>
+        <div class="kotak kotak4">ease-in-out</div>
+        <div class="kotak kotak5">linier</div>
+        <div class="kotak kotak6">cubic-bezier</div>
+    </div>
+
+</body>
+
+</html>

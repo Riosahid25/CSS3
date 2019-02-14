@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>liner gradient & radial gradients</title>
+    <style>
+        div {
+            width: 600px;
+            height: 300px;
+            margin: 50px auto;
+            /* background-image: linear-gradient(red, #ffff00, rgba(255, 255, 0, 1), green); */
+            /* red warna atas ,warna tengah, green warna bawah. bisa pakai rgb , heksa
+            script simplenya: background: linier-gradient(red,green);
+             */
+
+            /* mengatur gradientnya 
+             background: linear-gradient(90deg,red,green);
+             jadi 90deg(degree=derajat) jadi dari kiri ke kanan red - green. klo kanan ke kiri -90deg. klo diagonal =45deg .
+              */
+
+            /* color stop adalah untuk memberikan bobot warna yg berbeda cara melihat location di photoshop gradient. % itu untuk locations nya
+            bisa pakai px juga
+            background: linear-gradient(to right, red 63%, green 80%)*/
+
+
+            /* radial gradient sintaks sama linear 
+            contoh sintaks : 
+            radial-g radient(
+            <tipe ada ellipe & circle> <jangkauan ada closest-corner, closest-side, farthest-corner, farthest-side> at <posisi-y vertikal> <posisi-x horizontal>,
+            <warna-1>, 
+            <warna-2>,
+            .....,
+            <warna-n>
+            ); */
+            background-image: radial-gradient(circle farthest-side at top left, red, blue);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- gradient dalah teknik untuk memberikan warna gradasi  pada elemen yg kita punya.
+    2 tipe gradients :
+    -liniear gradient = memberikan gradasi wanra secara garis  lurus. 
+    -radial gradient = untuk memberikan warna seacara melingkar.
+    -->
+
+    <!-- arah untuk mengatur bayangan warna kita:
+    to bottom = atas kebawa
+    to top    = bawah ke atas
+    to left   = kanan ke kiri
+    to right  = kiri ke kanan
+
+    arah diagonal:
+    to left top     = atas kiri
+    to left bottom  = bawah kiri
+    to right top    = atas kanan  
+    to right bottom = bawah kanan
+    -->
+
+    <div></div>
+</body>
+
+
+</html>

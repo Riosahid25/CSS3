@@ -1,0 +1,229 @@
+/* step3 */
+/* font */
+@font-face {
+    font-family: 'abhaya_libreregular';
+    src: url('../font/AbhayaLibre-Regular-webfont.woff') format('woff');
+}
+
+/* step4 */
+/* style utama */
+body {
+    font: 16px/36px 'abhaya_libreregular', 'arial narrow', arial, sans-serif;
+    background-color: #ddd;
+}
+
+/* step5 */
+h1 {
+    font-size: 80px;
+    margin: 50px 0;
+    text-align: center;
+    text-shadow: 1px 1px 1px white;
+}
+
+/* step6 */
+.container {
+    width: 820px;
+    background-color: white;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+/* step7 */
+.galery li {
+    width: 120px;
+    height: 136px;
+    /* border-radius: 50%; diapus setelah step 10 */
+    /* overflow: hidden; setelah step9 backolor*/
+    border: 3px solid #666;
+    float: left;
+    margin-right: 10px;
+    /* step 12 */
+    position: relative;
+}
+
+/* step8 */
+.clear {
+    clear: both;
+}
+
+/* step9 */
+.galery li span {
+    display: block;
+    width: 120px;
+    height: 136px;
+    background-color: rgba(200, 200, 200, 0.5);
+    /* border-radius: 50%; diapus setelah step10*/
+
+    /* step11 */
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 136px;
+    color: #333;
+    text-shadow: 1px 1px 1px #ddd;
+    opacity: 0;
+
+    /* step15 keadaan awal*/
+    transform: scale(0) rotate(0);
+
+    /* step13 */
+    transition: 0.3s;
+}
+
+/* step12 */
+/* cara baca : ketika a yang didalam li di hover maka span didalmnya solid atau transparannya 1*/
+.galery li a:hover span {
+    opacity: 1;
+
+    /* step14 keadaan akhir*/
+    transform: scale(1) rotate(360deg);
+}
+
+/* step10 penggabungan border radius di class galery */
+.galery li,
+.galery li img,
+.galery li span {
+    border-radius: 50px;
+}
+
+/* step18 */
+/* overlay */
+.overlay {
+    /* step25 hanya untuk width,height,overflow*/
+    width: 0;
+    height: 0;
+    overflow: hidden;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* right: 0;
+    bottom: 0;  setelah step21*/
+    background: rgba(0, 0, 0, 0);
+    /* s-index mengatur tumpukan nons-static */
+    z-index: 9999;
+
+    /* step23 */
+    transition: 0.8s;
+
+    /* step28 */
+    text-align: center;
+    padding: 100px 0;
+}
+
+/* step 21 buttom right pindhkan ke sini */
+.overlay:target {
+    /* step26 hanya untuk width,height */
+    width: auto;
+    height: auto;
+
+    bottom: 0;
+    right: 0;
+
+    /* step22 */
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* step27 */
+.overlay img {
+    max-height: 100%;
+
+    /* step29 */
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+}
+
+/* step31 kasih animasi */
+.overlay:target img {
+    animation: zoomdanfade 1s;
+}
+
+/* step33 */
+.overlay .close {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -32px;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border: 1px solid white;
+    line-height: 14px;
+    padding: 5px;
+
+    /* step36 */
+    opacity: 0;
+}
+
+/* step35 */
+.overlay:target .close {
+    animation: slidedowndanfade 0.5s 0.5s forwards;
+}
+
+/* step42 menggerakkan animation 
+    step 44 tambahkan untuk prev*/
+.overlay:target .next,
+.overlay:target .prev {
+    animation: fadeajah 0.5s 0.5s forwards;
+}
+
+/* step30 */
+/* animasi */
+@keyframes zoomdanfade {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* step39 tambahkan next step40-> prev */
+/* navigasi */
+.next,
+.prev {
+    width: 57px;
+    height: 57px;
+    background-image: url('../icon/right2.png');
+    position: absolute;
+    text-indent: -999999px;
+    top: 40%;
+    margin-left: 50px;
+
+    /* step43 tambah opacity */
+    opacity: 0;
+}
+
+/* step40 setelah yg diatas */
+.prev {
+    background-image: url('../icon/left2.png');
+    margin-left: -100px;
+}
+
+/* step34 untuk membuat animasi*/
+@keyframes slidedowndanfade {
+    0% {
+        opacity: 0;
+        margin-top: -20px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+/* step 41 tambah animasi lagi */
+@keyframes fadeajah {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

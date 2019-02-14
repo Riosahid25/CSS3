@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>box shadow</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            margin: 50px auto;
+            /* box-shadow: 0px 30px 10px -20px rgba(0, 0, 0, 0.75); */
+            /* box-shadow: x-offset, y-offset blur, spread ,warna */
+            /* transition: 0.3s; */
+
+            /* belajar inset
+            box-shadow: inset 0 0 15px 5px rgba(0, 0, 0, 0.5); */
+
+            /* belajar multiple-shadow tanda koma untuk menambah lagi */
+            box-shadow: 5px 5px 5px rgba(255, 0, 0, 0.5),
+                -5px -5px 5px rgba(0, 0, 255, 0.5);
+        }
+
+
+        /* div:hover {
+            box-shadow: 0px 80px 10px -40px rgba(0, 0, 0, 0.15);
+            margin-top: 40px;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- property box shadow 
+    <x-offset> = untuk mengatur jarak bayangan pada sumbu horizontal nilai numeric jika dikasi 10px maka bergerak kekanan sebanyak 10px klo -10px bergerak ke sebelah kiri.
+    <y-offset> = untuk mengatur jarak bayangan pada sumbu vertikal sama seperti diatas.
+    <blur>     = untuk mengatur blur pada bayangan.
+    <color>    = untuk mewarnai bayangannya.
+    <spread>   = untuk ukuran dari bayangannya.
+    <inset>    = untuk berada didalam kotaknya bukan diluar seperti yg dicoba tadi.
+    multiple shadow = untuk memberikan lebih dari satu bayangan dari elemen.
+-->
+    <div></div>
+</body>
+
+</html>

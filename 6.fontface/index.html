@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Font face</title>
+    <style>
+        @font-face {
+            font-family: "alex brush";
+            /* alex brush itu nama */
+            src: url('AlexBrush-Regular.ttf')format('truetype');
+            /* src cari nama folder yg didownload. klo ttf/otf formatnya truetype */
+        }
+
+        h1 {
+            font-size: 100px;
+            text-align: center;
+            font-f amily: "alex brush", arial;
+            /* ff untuk memanggil nama yg telah diregistrasi , arial untuk fallbacknya */
+        }
+    </style>
+</head>
+
+<body>
+    <!--  font face digunakan untuk mengelola font pada css kita-->
+    <h1>Hello Word</h1>
+</body>
+
+</html>
